@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>net.deanishe.alfred-fakeum</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>03F09777-FA2A-45F3-A8A8-49AA079FFC61</key>
@@ -316,6 +318,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -335,7 +339,8 @@
 				<key>runningsubtext</key>
 				<string>Faking up some stuff…</string>
 				<key>script</key>
-				<string>/usr/bin/python fakeum.py "$1"</string>
+				<string>export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
+python3 fakeum.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -354,7 +359,7 @@
 			<key>uid</key>
 			<string>305FB681-8DA9-4F6C-9C38-1B3880FDD6BF</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -363,6 +368,8 @@
 				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<false/>
 			</dict>
@@ -371,7 +378,7 @@
 			<key>uid</key>
 			<string>03F09777-FA2A-45F3-A8A8-49AA079FFC61</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -380,8 +387,6 @@
 				<true/>
 				<key>focusedappvariablename</key>
 				<string>SNIPPET_MODE</string>
-				<key>keyword</key>
-				<string>xxfake</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
@@ -450,6 +455,8 @@ vars={allvars}
 				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<false/>
 			</dict>
@@ -458,7 +465,7 @@ vars={allvars}
 			<key>uid</key>
 			<string>4665F575-371B-44C6-BDA4-732AF54E382A</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -500,7 +507,8 @@ vars={allvars}
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/python config.py --toggle-locale "$1"</string>
+				<string>export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
+python3 config.py --toggle-locale "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -541,6 +549,8 @@ vars={allvars}
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -558,7 +568,8 @@ vars={allvars}
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>/usr/bin/python config.py locales "$1"</string>
+				<string>export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
+python3 config.py locales "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -577,7 +588,7 @@ vars={allvars}
 			<key>uid</key>
 			<string>6B240575-52BD-4397-9404-E14A5D663E41</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -649,6 +660,8 @@ vars={allvars}
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -666,7 +679,8 @@ vars={allvars}
 				<key>runningsubtext</key>
 				<string>Loading settings…</string>
 				<key>script</key>
-				<string>/usr/bin/python config.py settings "$1"</string>
+				<string>export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
+python3 config.py settings "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -685,7 +699,7 @@ vars={allvars}
 			<key>uid</key>
 			<string>53CFB8D5-1D80-415A-8340-D1FDCBFCCD36</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -831,7 +845,7 @@ vars={allvars}
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Generate test data</string>
+	<string>Update to Python 3</string>
 	<key>uidata</key>
 	<dict>
 		<key>03F09777-FA2A-45F3-A8A8-49AA079FFC61</key>
@@ -1091,7 +1105,7 @@ vars={allvars}
 		<string>SHOW_NOTIFICATIONS</string>
 	</array>
 	<key>version</key>
-	<string>2.2.2</string>
+	<string>2.2.3</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>

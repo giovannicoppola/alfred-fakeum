@@ -170,7 +170,7 @@ def get_fake_datum(name):
     elif isinstance(datum, datetime.datetime):
         datum = datum.strftime('%Y-%m-%d %H:%M:%S')
 
-    elif not isinstance(datum, basestring):
+    elif not isinstance(datum, str):
         log.debug(u'%s : (%s) %r', name, datum.__class__, datum)
 
     return datum
