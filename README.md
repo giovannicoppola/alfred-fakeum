@@ -3,7 +3,17 @@ Alfred Fakeum
 
 Generate fake test data in Alfred for testing. Based on [Faker][faker].
 
+<a href="https://github.com/giovannicoppola/alfred-fakeum/releases/latest/">
+<img alt="Downloads"
+src="https://img.shields.io/github/downloads/giovannicoppola/alfred-fakeum/total?color=purple&label=Downloads"><br/>
+</a>
+
+
+Original by Dean Jackson ([@deanishe](https://github.com/deanishe))
+
 ![][demo]
+
+
 
 
 Download & installation
@@ -11,7 +21,9 @@ Download & installation
 
 Download the workflow from [GitHub][gh-releases], then double-click to install.
 
-**Note**: Files with the extension `alfred3workflow` are not compatible with Alfred 2.
+### Note
+- Version 2.3 is for Alfred 5. 
+- For Alfred 4, use [version 2.2.3](https://github.com/giovannicoppola/alfred-fakeum/releases/tag/v2.2.3)
 
 
 Usage
@@ -194,7 +206,7 @@ Alfred Fakum uses the following libraries:
 - [docopt][docopt] ([MIT Licence][mit])
 - [Alfred-Workflow][alfred-workflow] ([MIT Licence][mit])
 
-[gh-releases]: https://github.com/deanishe/alfred-fakeum/releases/latest
+[gh-releases]: https://github.com/giovannicoppola/alfred-fakeum/releases/latest
 [mit]: http://opensource.org/licenses/MIT
 [alfred-workflow]: http://www.deanishe.net/alfred-workflow/
 [font-awesome]: http://fortawesome.github.io/Font-Awesome/
@@ -203,4 +215,4 @@ Alfred Fakum uses the following libraries:
 [faker]: https://github.com/joke2k/faker
 [faker-licence]: https://github.com/joke2k/faker/blob/master/LICENSE.txt
 [sil]: http://scripts.sil.org/OFL
-[demo]: https://raw.githubusercontent.com/deanishe/alfred-fakeum/master/demo.gif
+[demo]: https://raw.githubusercontent.com/giovannicoppola/alfred-fakeum/master/demo.gif

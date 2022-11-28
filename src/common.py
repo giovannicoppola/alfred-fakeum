@@ -32,10 +32,10 @@ DEFAULT_SETTINGS = {
     ],
 }
 
-DOCS_URL = 'https://github.com/deanishe/alfred-fakeum/blob/master/README.md'
+DOCS_URL = 'https://github.com/giovannicoppola/alfred-fakeum/blob/master/README.md'
 HELP_URL = u'https://www.alfredforum.com/topic/5319-fakeum-—-generate-fake-test-datasets-in-alfred/'
-ISSUE_URL = 'https://github.com/deanishe/alfred-fakeum/issues'
-UPDATE_SETTINGS = {'github_slug': 'deanishe/alfred-fakeum'}
+ISSUE_URL = 'https://github.com/giovannicoppola/alfred-fakeum/issues'
+UPDATE_SETTINGS = {'github_slug': 'giovannicoppola/alfred-fakeum'}
 
 # Workflow icons
 ICON_DOCS = 'icons/docs.png'
@@ -112,6 +112,9 @@ BUNDLE_ID = os.getenv('alfred_workflow_bundleid')
 
 # Script Filter keyword
 KEYWORD = os.getenv('keyword')
+
+# AppleScript to run an Alfred search
+SEARCH_AS = u'tell application "Alfred 3" to search "{query}"'
 
 
 def boolvar(name, default=False):

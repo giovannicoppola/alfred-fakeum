@@ -387,6 +387,8 @@ python3 fakeum.py "$1"</string>
 				<true/>
 				<key>focusedappvariablename</key>
 				<string>SNIPPET_MODE</string>
+				<key>keyword</key>
+				<string>xxfake</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
@@ -438,6 +440,8 @@ vars={allvars}
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
 				<key>triggerid</key>
 				<string>fake</string>
 			</dict>
@@ -489,6 +493,8 @@ vars={allvars}
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
 				<key>triggerid</key>
 				<string>locales</string>
 			</dict>
@@ -598,7 +604,8 @@ python3 config.py locales "$1"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/python config.py --toggle-notifications</string>
+				<string>export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
+python3 config.py --toggle-notifications</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -706,12 +713,14 @@ python3 config.py settings "$1"</string>
 			<dict>
 				<key>browser</key>
 				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
 				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
@@ -742,6 +751,8 @@ python3 config.py settings "$1"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
 				<key>triggerid</key>
 				<string>config</string>
 			</dict>
@@ -814,6 +825,8 @@ python3 config.py settings "$1"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
 				<key>triggerid</key>
 				<string>notify</string>
 			</dict>
@@ -845,7 +858,31 @@ python3 config.py settings "$1"</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Update to Python 3</string>
+	<string>**Generate fake test data in Alfred for testing. Based on [Faker](https://github.com/joke2k/faker).**
+Ported to Python 3 and Alfred 5.
+Original by Dean Jackson ([@deanishe](https://github.com/deanishe) )
+
+- `fake [&lt;query&gt;]` — List/filter available fake data types
+    - `↩`, `⌘+C` or `⌘+NUM` — Copy one fake datum to clipboard
+    - `⌘+↩` — Paste fake datum into frontmost app
+    - `⇥` — Specify number of datasets to copy to clipboard
+    - `⌘+L` — Show generated data in Alfred's Large Text window
+- `fakeconfig [&lt;query&gt;]` — Edit workflow settings
+    - `Notifications` — Turn notifications on/off
+        - `↩` — Toggle on/off
+    - `Locales` — Turn locales for fake data on/off
+        - `↩` — Show &amp; edit active locales
+            - `[&lt;query&gt;]` — Filter locales
+            - `↩` — Toggle locale on/off
+    - `Documentation` — Open GitHub README in your browser
+    - `Report Problem` — Open the issue tracker in your brower
+    - `Get Help` — Open the workflow's thread on AlfredForum.com in your browser
+
+If you specify multiple data, e.g. `fake Name ✕ 10` for 10 names, the data will be separated by newlines (`\n`).
+
+In the case of `Paragraph` and `Address` types, the data will be separated by two newlines (`\n\n`).
+
+There is also a **Snippet Trigger** (`xxfake` by default) to insert fake data directly into other applications.</string>
 	<key>uidata</key>
 	<dict>
 		<key>03F09777-FA2A-45F3-A8A8-49AA079FFC61</key>
@@ -853,18 +890,18 @@ python3 config.py settings "$1"</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>730</integer>
+			<real>730</real>
 			<key>ypos</key>
-			<integer>40</integer>
+			<real>40</real>
 		</dict>
 		<key>0668BE10-EC1F-4149-998D-8323D46BB16C</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>12</integer>
 			<key>xpos</key>
-			<integer>390</integer>
+			<real>390</real>
 			<key>ypos</key>
-			<integer>1020</integer>
+			<real>1020</real>
 		</dict>
 		<key>08313AD4-F429-4763-9CBB-A964807C3DF8</key>
 		<dict>
@@ -873,9 +910,9 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>Filter and turn locales on/off</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<real>40</real>
 			<key>ypos</key>
-			<integer>330</integer>
+			<real>330</real>
 		</dict>
 		<key>1663C906-4CD7-4A49-A885-76ABB8B44FA3</key>
 		<dict>
@@ -884,9 +921,9 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>{query} is URL</string>
 			<key>xpos</key>
-			<integer>430</integer>
+			<real>430</real>
 			<key>ypos</key>
-			<integer>720</integer>
+			<real>720</real>
 		</dict>
 		<key>305FB681-8DA9-4F6C-9C38-1B3880FDD6BF</key>
 		<dict>
@@ -895,45 +932,45 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>Generate fake data</string>
 			<key>xpos</key>
-			<integer>220</integer>
+			<real>220</real>
 			<key>ypos</key>
-			<integer>40</integer>
+			<real>40</real>
 		</dict>
 		<key>41689F12-93E0-4C28-996B-4E9753D67E71</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>550</integer>
+			<real>550</real>
 			<key>ypos</key>
-			<integer>690</integer>
+			<real>690</real>
 		</dict>
 		<key>439C72BE-4E5C-4E43-9A27-67278851C53B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>12</integer>
 			<key>xpos</key>
-			<integer>1020</integer>
+			<real>1020</real>
 			<key>ypos</key>
-			<integer>330</integer>
+			<real>330</real>
 		</dict>
 		<key>4665F575-371B-44C6-BDA4-732AF54E382A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>730</integer>
+			<real>730</real>
 			<key>ypos</key>
-			<integer>180</integer>
+			<real>180</real>
 		</dict>
 		<key>4FA6CD79-202B-4F1B-9D2E-45133B1CBF62</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>440</integer>
+			<real>440</real>
 			<key>ypos</key>
-			<integer>70</integer>
+			<real>70</real>
 		</dict>
 		<key>53CFB8D5-1D80-415A-8340-D1FDCBFCCD36</key>
 		<dict>
@@ -942,9 +979,9 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>Show settings</string>
 			<key>xpos</key>
-			<integer>220</integer>
+			<real>220</real>
 			<key>ypos</key>
-			<integer>690</integer>
+			<real>690</real>
 		</dict>
 		<key>5BB103F1-C20A-4AEC-AB23-051F4AA6816E</key>
 		<dict>
@@ -953,9 +990,9 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>Toggle notifications on/off</string>
 			<key>xpos</key>
-			<integer>550</integer>
+			<real>550</real>
 			<key>ypos</key>
-			<integer>500</integer>
+			<real>500</real>
 		</dict>
 		<key>5D5BA360-FC2F-41E9-8F59-D110EEDCB173</key>
 		<dict>
@@ -964,9 +1001,9 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>Show a notification</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<real>40</real>
 			<key>ypos</key>
-			<integer>1020</integer>
+			<real>1020</real>
 		</dict>
 		<key>6753BE65-D846-4708-B37C-BF050DF5F151</key>
 		<dict>
@@ -975,9 +1012,9 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>{query} == notifications</string>
 			<key>xpos</key>
-			<integer>430</integer>
+			<real>430</real>
 			<key>ypos</key>
-			<integer>530</integer>
+			<real>530</real>
 		</dict>
 		<key>6B240575-52BD-4397-9404-E14A5D663E41</key>
 		<dict>
@@ -986,18 +1023,18 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>Filter and turn locales on/off</string>
 			<key>xpos</key>
-			<integer>220</integer>
+			<real>220</real>
 			<key>ypos</key>
-			<integer>330</integer>
+			<real>330</real>
 		</dict>
 		<key>80140127-E88D-4ED2-B69F-2A6EA08F3407</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<integer>40</integer>
+			<real>40</real>
 			<key>ypos</key>
-			<integer>770</integer>
+			<real>770</real>
 		</dict>
 		<key>83AA3EC6-EBFE-46C8-85C4-2E91D6871E8D</key>
 		<dict>
@@ -1006,9 +1043,9 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>SHOW_NOTIFICATIONS == 1</string>
 			<key>xpos</key>
-			<integer>260</integer>
+			<real>260</real>
 			<key>ypos</key>
-			<integer>1050</integer>
+			<real>1050</real>
 		</dict>
 		<key>A02656B0-0D8B-4C2B-8C8C-325486F55C83</key>
 		<dict>
@@ -1017,27 +1054,27 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>paste != 1</string>
 			<key>xpos</key>
-			<integer>610</integer>
+			<real>610</real>
 			<key>ypos</key>
-			<integer>70</integer>
+			<real>70</real>
 		</dict>
 		<key>ABCA2919-C9DA-4D16-9C99-15842934B872</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<integer>40</integer>
+			<real>40</real>
 			<key>ypos</key>
-			<integer>620</integer>
+			<real>620</real>
 		</dict>
 		<key>BBB81D4A-9ED4-4C71-8CD3-248ED0F2CB3A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>40</integer>
+			<real>40</real>
 			<key>ypos</key>
-			<integer>180</integer>
+			<real>180</real>
 		</dict>
 		<key>BF97123F-C623-457B-B1E9-F417109255A7</key>
 		<dict>
@@ -1046,9 +1083,9 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>Toggle locale on/off</string>
 			<key>xpos</key>
-			<integer>390</integer>
+			<real>390</real>
 			<key>ypos</key>
-			<integer>330</integer>
+			<real>330</real>
 		</dict>
 		<key>DB3E2362-A245-48F2-97EB-7438EE01A0BC</key>
 		<dict>
@@ -1057,27 +1094,27 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>paste == 1</string>
 			<key>xpos</key>
-			<integer>610</integer>
+			<real>610</real>
 			<key>ypos</key>
-			<integer>210</integer>
+			<real>210</real>
 		</dict>
 		<key>E31FF35D-3BFF-4A13-B804-7550FBD280C9</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>40</integer>
+			<real>40</real>
 			<key>ypos</key>
-			<integer>40</integer>
+			<real>40</real>
 		</dict>
 		<key>E4106CE4-7B7A-41AC-896D-40160A37952C</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>4</integer>
 			<key>xpos</key>
-			<integer>550</integer>
+			<real>550</real>
 			<key>ypos</key>
-			<integer>850</integer>
+			<real>850</real>
 		</dict>
 		<key>F01C9E5F-D701-41D1-8FC2-71EE6DD64371</key>
 		<dict>
@@ -1086,27 +1123,82 @@ python3 config.py settings "$1"</string>
 			<key>note</key>
 			<string>{query} == locales</string>
 			<key>xpos</key>
-			<integer>430</integer>
+			<real>430</real>
 			<key>ypos</key>
-			<integer>880</integer>
+			<real>880</real>
 		</dict>
 	</dict>
-	<key>variables</key>
-	<dict>
-		<key>LIPSUM_SENTENCES</key>
-		<string>3</string>
-		<key>SHOW_NOTIFICATIONS</key>
-		<string>1</string>
-		<key>keyword</key>
-		<string>fake</string>
-	</dict>
-	<key>variablesdontexport</key>
+	<key>userconfigurationconfig</key>
 	<array>
-		<string>SHOW_NOTIFICATIONS</string>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>fake</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>3</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>LIPSUM_SENTENCES</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>1</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>SHOW_NOTIFICATIONS</string>
+		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>2.2.3</string>
+	<string>2.3</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/giovannicoppola/alfred-fakeum</string>
 </dict>
 </plist>
