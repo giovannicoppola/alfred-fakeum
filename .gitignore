@@ -1,4 +1,8 @@
 
+.DS_Store
+*.pyc
+__pycache__
+
 prefs.plist
 *.dist-info
 .alfredversionchecked
