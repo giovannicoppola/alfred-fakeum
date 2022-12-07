@@ -24,7 +24,7 @@ from workflow.util import run_trigger
 from common import (
     DEFAULT_SETTINGS,
     ISSUE_URL,
-    UPDATE_SETTINGS,
+    
     intvar,
 )
 
@@ -301,7 +301,7 @@ def main(wf):
 
 if __name__ == '__main__':
     wf = Workflow3(default_settings=DEFAULT_SETTINGS,
-                   update_settings=UPDATE_SETTINGS,
+                   
                    help_url=ISSUE_URL,
                    libraries=['./libs'])
     log = wf.logger

@@ -46,7 +46,7 @@ from common import (
     ICON_LOCALES,
     ICON_UPDATE_AVAILABLE,
     ICON_UPDATE_CHECK,
-    UPDATE_SETTINGS,
+    
     boolvar,
 )
 
@@ -57,14 +57,9 @@ log = None
 def filter_options(query):
     """Show available options."""
     options = []
-    if wf.update_available:
-        title = 'An update is available'
-        subtitle = u'↩ or ⇥ to install update'
-        icon = ICON_UPDATE_AVAILABLE
-    else:
-        title = 'Check for update'
-        subtitle = u'↩ or ⇥ to check for update'
-        icon = ICON_UPDATE_CHECK
+    title = ''
+    subtitle = ''
+    icon = ''
 
     options = [
         dict(title=title,
@@ -208,7 +203,7 @@ def main(wf):
 
 if __name__ == '__main__':
     wf = Workflow3(default_settings=DEFAULT_SETTINGS,
-                   update_settings=UPDATE_SETTINGS,
+                   
                    help_url=HELP_URL,
                    libraries=['./libs'])
     log = wf.logger

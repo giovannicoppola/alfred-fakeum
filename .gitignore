@@ -1,4 +1,5 @@
 
+prefs.plist
 *.dist-info
 .alfredversionchecked
 

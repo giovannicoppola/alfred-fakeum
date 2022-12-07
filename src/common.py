@@ -35,7 +35,7 @@ DEFAULT_SETTINGS = {
 DOCS_URL = 'https://github.com/giovannicoppola/alfred-fakeum/blob/master/README.md'
 HELP_URL = u'https://www.alfredforum.com/topic/5319-fakeum-—-generate-fake-test-datasets-in-alfred/'
 ISSUE_URL = 'https://github.com/giovannicoppola/alfred-fakeum/issues'
-UPDATE_SETTINGS = {'github_slug': 'giovannicoppola/alfred-fakeum'}
+
 
 # Workflow icons
 ICON_DOCS = 'icons/docs.png'

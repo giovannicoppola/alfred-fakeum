@@ -35,7 +35,6 @@ Usage
     - `⇥` — Specify number of datasets to copy to clipboard
     - `⌘+L` — Show generated data in Alfred's Large Text window
 - `fakeconfig [<query>]` — Edit workflow settings
-    - `An update is available` / `Check for update` — Check for and/or install an updated version of the workflow
     - `Notifications` — Turn notifications on/off
         - `↩` — Toggle on/off
     - `Locales` — Turn locales for fake data on/off

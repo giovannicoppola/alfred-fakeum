@@ -858,7 +858,8 @@ python3 config.py settings "$1"</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>**Generate fake test data in Alfred for testing. Based on [Faker](https://github.com/joke2k/faker).**
+	<string># Fakeum
+**Generate fake test data in Alfred for testing. Based on [Faker](https://github.com/joke2k/faker).**
 Ported to Python 3 and Alfred 5.
 Original by Dean Jackson ([@deanishe](https://github.com/deanishe) )
 
@@ -1166,7 +1167,7 @@ There is also a **Snippet Trigger** (`xxfake` by default) to insert fake data di
 			<key>description</key>
 			<string></string>
 			<key>label</key>
-			<string></string>
+			<string>LIPSUM_SENTENCES</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -1187,7 +1188,7 @@ There is also a **Snippet Trigger** (`xxfake` by default) to insert fake data di
 			<key>description</key>
 			<string></string>
 			<key>label</key>
-			<string></string>
+			<string>SHOW_NOTIFICATIONS</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -1197,7 +1198,7 @@ There is also a **Snippet Trigger** (`xxfake` by default) to insert fake data di
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>2.3</string>
+	<string>2.3.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/giovannicoppola/alfred-fakeum</string>
 </dict>
