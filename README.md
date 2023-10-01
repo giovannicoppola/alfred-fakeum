@@ -42,7 +42,7 @@ Usage
             - `[<query>]` — Filter locales
             - `↩` — Toggle locale on/off
     - `Documentation` — Open GitHub README in your browser
-    - `Report Problem` — Open the issue tracker in your brower
+    - `Report Problem` — Open the issue tracker in your browser
     - `Get Help` — Open the workflow's thread on AlfredForum.com in your browser
 
 If you specify multiple data, e.g. `fake Name ✕ 10` for 10 names, the data will be separated by newlines (`\n`).
