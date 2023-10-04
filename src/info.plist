@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>net.deanishe.alfred-fakeum</string>
+	<string>giovanni.alfred-fakeum</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -302,7 +302,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Dean Jackson</string>
+	<string>Giovanni Coppola</string>
 	<key>description</key>
 	<string>Generate Fake Data</string>
 	<key>disabled</key>
@@ -1167,7 +1167,7 @@ There is also a **Snippet Trigger** (`xxfake` by default) to insert fake data di
 			<key>description</key>
 			<string></string>
 			<key>label</key>
-			<string>LIPSUM_SENTENCES</string>
+			<string>Lipsum Sentences</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -1177,28 +1177,24 @@ There is also a **Snippet Trigger** (`xxfake` by default) to insert fake data di
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>1</string>
-				<key>placeholder</key>
-				<string></string>
+				<true/>
 				<key>required</key>
 				<false/>
-				<key>trim</key>
-				<true/>
+				<key>text</key>
+				<string>Show notifications</string>
 			</dict>
 			<key>description</key>
 			<string></string>
 			<key>label</key>
-			<string>SHOW_NOTIFICATIONS</string>
+			<string>Notifications</string>
 			<key>type</key>
-			<string>textfield</string>
+			<string>checkbox</string>
 			<key>variable</key>
 			<string>SHOW_NOTIFICATIONS</string>
 		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
-	<string>2.3.1</string>
+	<string>2.3.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/giovannicoppola/alfred-fakeum</string>
 </dict>
