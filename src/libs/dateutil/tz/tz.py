@@ -17,8 +17,7 @@ import weakref
 from collections import OrderedDict
 
 import six
-from six import string_types
-from six.moves import _thread
+from six import moves, string_types
 from ._common import tzname_in_python2, _tzinfo
 from ._common import tzrangebase, enfold
 from ._common import _validate_fromutc_inputs
@@ -1166,7 +1165,7 @@ class _tzicalvtz(_tzinfo):
         self._comps = comps
         self._cachedate = []
         self._cachecomp = []
-        self._cache_lock = _thread.allocate_lock()
+        self._cache_lock = moves._thread.allocate_lock()
 
     def _find_comp(self, dt):
         if len(self._comps) == 1:
@@ -1541,7 +1540,7 @@ def __get_gettz():
             self.__instances = weakref.WeakValueDictionary()
             self.__strong_cache_size = 8
             self.__strong_cache = OrderedDict()
-            self._cache_lock = _thread.allocate_lock()
+            self._cache_lock = moves._thread.allocate_lock()
 
         def __call__(self, name=None):
             with self._cache_lock:
