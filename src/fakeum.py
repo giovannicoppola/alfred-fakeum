@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # encoding: utf-8
 #
 # Copyright (c) 2014 deanishe@deanishe.net
@@ -220,10 +220,8 @@ def main(wf):
                     autocomplete='workflow:update',
                     icon='update-available.png')
 
-    query = None
-
-    if len(wf.args):
-        query = wf.args[0]
+    # always a string: `DELIMITER in query` below would raise TypeError on None
+    query = wf.args[0] if wf.args else ''
 
     log.debug('query=%r', query)
 

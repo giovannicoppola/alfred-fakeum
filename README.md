@@ -7,6 +7,10 @@ Generate fake test data in Alfred for testing. Based on [Faker][faker].
 <img alt="Downloads"
 src="https://img.shields.io/github/downloads/giovannicoppola/alfred-fakeum/total?color=purple&label=Downloads"><br/>
 </a>
+<a href="https://alfred.app/workflows/giovannicoppola/fakeum/">
+<img alt="Gallery Downloads"
+src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiovannicoppola%2Falfred-gallery-downloads%2Fmain%2Fdownloads.json&query=%24.fakeum%5B0%5D.display&label=Gallery%20Downloads&color=blue&logo=alfred"><br/>
+</a>
 
 
 Original by Dean Jackson ([@deanishe](https://github.com/deanishe))
