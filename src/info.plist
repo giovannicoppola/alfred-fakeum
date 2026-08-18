@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>net.deanishe.alfred-fakeum</string>
+	<string>giovanni.alfred-fakeum</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -302,7 +302,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Dean Jackson</string>
+	<string>Dean Jackson (maintained by giovanni)</string>
 	<key>description</key>
 	<string>Generate Fake Data</string>
 	<key>disabled</key>
