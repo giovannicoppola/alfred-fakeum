@@ -198,6 +198,16 @@ Supported locales
 - Ukranian
 
 
+Changelog
+---------
+
+- **2026-08-18 Version 2.3.3** – Fixed `ModuleNotFoundError: No module named 'six.moves'`, which broke the workflow on modern Python 3 (vendored `dateutil` import); updated bundle ID and author attribution.
+- **2026-08-09 Version 2.3.2** – Guarded against a crash on an empty query, fixed the script filter's Python 2 shebang, pinned `/usr/bin/python3`, added Gallery Downloads badge.
+- **2022-12-06 Version 2.3.1** – Removed the auto-updater.
+- **2022-11-28 Version 2.3** – Alfred 5 rewrite.
+- **2022-05-24 Version 2.2.3** – Updated to Python 3 (last version supporting Alfred 4).
+
+
 Licensing, thanks
 -----------------
 
